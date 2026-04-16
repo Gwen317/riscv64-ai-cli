@@ -62,14 +62,14 @@ Headless release flow on the target:
 
 ```bash
 export DEEPSEEK_API_KEY="your-key"
-/home/pi/crush-riscv64/run-headless-pipeline.sh
+./scripts/run-headless-pipeline.sh
 ```
 
 Interactive verification flow on the target:
 
 ```bash
 export DEEPSEEK_API_KEY="your-key"
-/home/pi/crush-riscv64/verify-interactive-riscv64.sh
+./scripts/verify-interactive-riscv64.sh
 ```
 
 ## Notes

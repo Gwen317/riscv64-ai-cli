@@ -114,29 +114,29 @@ while also shipping scripts and docs that reproduce the current validated flow.
 
 ## Core Documents
 
-- Primary plan: [CRUSH_RISCV64_PLAN.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/plans/CRUSH_RISCV64_PLAN.md)
-- Dependency audit: [dependency-audit.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/dependency-audit.md)
-- Build log: [build-log.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/build-log.md)
-- Runtime test: [runtime-test.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/runtime-test.md)
-- Decisions: [decisions.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/decisions.md)
-- Headless deploy guide: [HEADLESS_DEPLOY.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_DEPLOY.md)
-- Headless release guide: [HEADLESS_RELEASE.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_RELEASE.md)
-- Release notes template: [HEADLESS_RELEASE_NOTES_TEMPLATE.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_RELEASE_NOTES_TEMPLATE.md)
-- Interactive notes: [INTERACTIVE_TUI_NOTES.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/INTERACTIVE_TUI_NOTES.md)
-- Contributing guide: [CONTRIBUTING.md](/d:/Users/Gwen317/Desktop/Program/riscv64/CONTRIBUTING.md)
-- Roadmap: [ROADMAP.md](/d:/Users/Gwen317/Desktop/Program/riscv64/ROADMAP.md)
+- Primary plan: [CRUSH_RISCV64_PLAN.md](./docs/plans/CRUSH_RISCV64_PLAN.md)
+- Dependency audit: [dependency-audit.md](./docs/notes/dependency-audit.md)
+- Build log: [build-log.md](./docs/notes/build-log.md)
+- Runtime test: [runtime-test.md](./docs/notes/runtime-test.md)
+- Decisions: [decisions.md](./docs/notes/decisions.md)
+- Headless deploy guide: [HEADLESS_DEPLOY.md](./docs/guides/HEADLESS_DEPLOY.md)
+- Headless release guide: [HEADLESS_RELEASE.md](./docs/guides/HEADLESS_RELEASE.md)
+- Release notes template: [HEADLESS_RELEASE_NOTES_TEMPLATE.md](./docs/guides/HEADLESS_RELEASE_NOTES_TEMPLATE.md)
+- Interactive notes: [INTERACTIVE_TUI_NOTES.md](./docs/guides/INTERACTIVE_TUI_NOTES.md)
+- Contributing guide: [CONTRIBUTING.md](./CONTRIBUTING.md)
+- Roadmap: [ROADMAP.md](./ROADMAP.md)
 
 核心文档：
 
-- 总体计划：[CRUSH_RISCV64_PLAN.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/plans/CRUSH_RISCV64_PLAN.md)
-- 依赖审计：[dependency-audit.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/dependency-audit.md)
-- 构建日志：[build-log.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/build-log.md)
-- 运行验证：[runtime-test.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/runtime-test.md)
-- 决策记录：[decisions.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/decisions.md)
-- Headless 部署说明：[HEADLESS_DEPLOY.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_DEPLOY.md)
-- Headless 发布说明：[HEADLESS_RELEASE.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_RELEASE.md)
-- Release Notes 模板：[HEADLESS_RELEASE_NOTES_TEMPLATE.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_RELEASE_NOTES_TEMPLATE.md)
-- Interactive 说明：[INTERACTIVE_TUI_NOTES.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/INTERACTIVE_TUI_NOTES.md)
+- 总体计划：[CRUSH_RISCV64_PLAN.md](./docs/plans/CRUSH_RISCV64_PLAN.md)
+- 依赖审计：[dependency-audit.md](./docs/notes/dependency-audit.md)
+- 构建日志：[build-log.md](./docs/notes/build-log.md)
+- 运行验证：[runtime-test.md](./docs/notes/runtime-test.md)
+- 决策记录：[decisions.md](./docs/notes/decisions.md)
+- Headless 部署说明：[HEADLESS_DEPLOY.md](./docs/guides/HEADLESS_DEPLOY.md)
+- Headless 发布说明：[HEADLESS_RELEASE.md](./docs/guides/HEADLESS_RELEASE.md)
+- Release Notes 模板：[HEADLESS_RELEASE_NOTES_TEMPLATE.md](./docs/guides/HEADLESS_RELEASE_NOTES_TEMPLATE.md)
+- Interactive 说明：[INTERACTIVE_TUI_NOTES.md](./docs/guides/INTERACTIVE_TUI_NOTES.md)
 
 ## Notes
 
