@@ -85,6 +85,8 @@ while also shipping scripts and docs that reproduce the current validated flow.
   [`run-interactive-riscv64.sh`](./scripts/run-interactive-riscv64.sh)
 - Verify:
   [`verify-interactive-riscv64.sh`](./scripts/verify-interactive-riscv64.sh)
+- Shell helpers:
+  [`interactive-shell-functions.sh`](./scripts/interactive-shell-functions.sh)
 - Full dual-lane pipeline:
   [`run-full-riscv64-pipeline.sh`](./scripts/run-full-riscv64-pipeline.sh)
 
@@ -109,6 +111,8 @@ while also shipping scripts and docs that reproduce the current validated flow.
   [`run-interactive-riscv64.sh`](./scripts/run-interactive-riscv64.sh)
 - 一键验证：
   [`verify-interactive-riscv64.sh`](./scripts/verify-interactive-riscv64.sh)
+- Shell 快捷函数：
+  [`interactive-shell-functions.sh`](./scripts/interactive-shell-functions.sh)
 - 双线流水线：
   [`run-full-riscv64-pipeline.sh`](./scripts/run-full-riscv64-pipeline.sh)
 

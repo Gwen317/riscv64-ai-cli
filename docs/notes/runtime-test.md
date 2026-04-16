@@ -91,6 +91,9 @@
   - `verify-interactive-riscv64.sh /home/pi/crush-riscv64/forks/crush crush-interactive-verify INTERACTIVE_VERIFY_OK /tmp/interactive-verify-run`
   - Passed
   - Returned: `INTERACTIVE_VERIFY_OK`
+- Interactive operator helpers:
+  - `interactive-shell-functions.sh` can be sourced on the target
+  - helper functions for build, run, and verify are available in the shell
 - Full pipeline:
   - `run-full-riscv64-pipeline.sh ... HEADLESS_FULL_PIPELINE_OK INTERACTIVE_FULL_PIPELINE_OK`
   - Passed

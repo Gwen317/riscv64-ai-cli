@@ -75,6 +75,10 @@ crush --session {session-id}
 crush --continue
   `,
 	RunE: func(cmd *cobra.Command, args []string) error {
+		if err := validateInteractiveTerminal(term.IsTerminal(os.Stdin.Fd()), term.IsTerminal(os.Stdout.Fd())); err != nil {
+			return err
+		}
+
 		sessionID, _ := cmd.Flags().GetString("session")
 		continueLast, _ := cmd.Flags().GetBool("continue")
 

@@ -21,6 +21,38 @@ export DEEPSEEK_API_KEY="your-key"
 /home/pi/crush-riscv64/run-interactive-riscv64.sh /home/pi/crush-riscv64/forks/crush/crush-interactive-riscv64
 ```
 
+## Practical usage
+
+Once the TUI is open:
+
+- type directly in the editor area
+- press `Enter` to send the current message
+- press `Ctrl+J` to insert a newline
+- press `Tab` to change focus
+- press `Ctrl+N` to start a new session
+- press `Ctrl+S` to open sessions
+- press `Ctrl+L` to open model selection
+- press `Ctrl+C` to quit
+
+## Recommended SSH workflow
+
+On the board:
+
+```bash
+export DEEPSEEK_API_KEY="your-key"
+cd /home/pi/crush-riscv64/forks/crush
+/home/pi/crush-riscv64/run-interactive-riscv64.sh ./crush-interactive-riscv64
+```
+
+If you rebuild often:
+
+```bash
+export DEEPSEEK_API_KEY="your-key"
+cd /home/pi/crush-riscv64/forks/crush
+/home/pi/crush-riscv64/build-interactive-riscv64.sh /home/pi/crush-riscv64/forks/crush crush-interactive-riscv64
+/home/pi/crush-riscv64/run-interactive-riscv64.sh ./crush-interactive-riscv64
+```
+
 For an automated smoke check on the target:
 
 ```bash
@@ -41,3 +73,4 @@ export DEEPSEEK_API_KEY="your-key"
 - The wrapper uses `/lib/ld-linux-riscv64-lp64d.so.1` explicitly because that
   is more reliable on the current board image than direct execution.
 - This path is still experimental compared with the validated headless build.
+- The current validated claim is not “every TUI feature is perfect”, but “a real prompt/response chat loop works on the target”.

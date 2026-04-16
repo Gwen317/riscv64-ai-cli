@@ -9,6 +9,12 @@ if [[ ! -f "$bin_path" ]]; then
   exit 1
 fi
 
+if [[ ! -t 0 || ! -t 1 ]]; then
+  echo "interactive mode requires a real terminal on stdin and stdout." >&2
+  echo "Use this wrapper from a normal SSH terminal instead of redirected or piped input." >&2
+  exit 1
+fi
+
 export TERM="${TERM:-xterm-256color}"
 
 # On the target board, invoking the loader explicitly is more reliable than

@@ -155,3 +155,11 @@ Reason:
 - The project now has two meaningful delivery lanes, so validation should cover both
 - The interactive wrapper turns a raw pseudo-tty experiment into a reusable proof step
 - The full pipeline wrapper gives the board a single command that exercises headless release flow plus interactive chat viability
+
+### Add shell helpers for manual interactive use on the target
+
+Reason:
+
+- A validated interactive path still feels awkward if every launch requires long manual commands
+- Lightweight shell functions are a low-risk way to improve operator ergonomics without changing core runtime behavior
+- This helps bridge the gap between “technically works” and “comfortable to use over SSH”
