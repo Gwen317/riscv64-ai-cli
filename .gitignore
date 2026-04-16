@@ -1,9 +1,8 @@
 .omx/
 dist/
 
-# Keep the workspace repo focused on notes, scripts, and release assets.
-# The upstream Crush clone remains managed in its own nested git repository.
-forks/crush/
+# Preserve nested-repo metadata backups outside the tracked source tree.
+forks/.git-backups/
 
 # Local/editor noise
 *.log
