@@ -1,75 +1,131 @@
 # riscv64-ai-cli
 
-Workspace for validating and packaging a `riscv64 Linux` AI coding CLI based on
-`Crush`, with two parallel delivery lanes:
+`riscv64-ai-cli` is a working repository for adapting `Crush` into a usable AI
+coding CLI on `riscv64 Linux`.
 
-- a minimal `headless` runtime for stable automation and release packaging
-- a recovering `interactive` TUI line for real terminal chat development
+`riscv64-ai-cli` 是一个面向 `riscv64 Linux` 的 AI 编程 CLI 适配仓库，当前以
+`Crush` 为基础持续推进。
 
-## Project Focus
+## Overview
 
-This repository tracks the adaptation work rather than vendoring the upstream
-codebase directly. The nested upstream clone remains under `forks/crush/` and is
-kept outside the top-level repository history on purpose.
+This repository currently has two delivery lanes:
 
-Current MVP priorities:
+- `headless`: the primary stable lane for build, package, verification, and release workflows
+- `interactive`: the secondary lane for terminal chat development and TUI recovery
 
-- remote provider access
-- session persistence
-- file read/write
-- search
-- diff/patch
-- controlled shell execution
+当前仓库主要有两条交付线：
+
+- `headless`：当前主交付线，已经可以构建、打包、验证和发布
+- `interactive`：次级交付线，主要用于终端聊天开发和 TUI 恢复
 
 ## Current Status
 
 - Native `riscv64 Linux` builds are validated on the K1 MUSE Pi Pro target
-- `headless` is now the primary delivery lane:
-  - builds on the target
-  - packages into a reusable bundle
-  - emits checksums and `manifest.json`
-  - supports one-command verify and pipeline wrappers
-- `interactive` is now a viable secondary lane:
-  - builds on the target
-  - enters a real TTY session
-  - has a validated minimal prompt/response loop
+- `headless` can build on-device, package into bundles, emit checksums and manifests, and pass scripted smoke tests
+- `interactive` can build on-device, enter a real TTY session, and complete a minimal prompt/response loop
 
-## Repository Structure
+当前状态：
 
-- [`forks/`](./forks) : upstream source clones kept outside the top-level repo history
-- [`scripts/`](./scripts) : build, package, verify, and pipeline wrappers
-- [`docs/plans/`](./docs/plans) : project plans and scope documents
+- 已在 K1 MUSE Pi Pro 上验证原生 `riscv64 Linux` 构建
+- `headless` 已具备板端构建、打包、校验和清单生成、自动 smoke 验证能力
+- `interactive` 已具备板端构建、真实 TTY 启动，以及最小聊天回路验证能力
+
+## Repository Layout
+
+- [`forks/crush/`](./forks/crush) : active upstream-derived source tree under adaptation
+- [`scripts/`](./scripts) : build, package, verify, release, and pipeline wrappers
+- [`docs/plans/`](./docs/plans) : plans and scope documents
 - [`docs/guides/`](./docs/guides) : deployment, release, and interaction guides
-- [`docs/notes/`](./docs/notes) : evidence, decisions, and validation notes
+- [`docs/notes/`](./docs/notes) : evidence, decisions, and validation records
 
-## Key Entrypoints
+仓库结构：
 
-- Headless build:
+- [`forks/crush/`](./forks/crush)：当前正在适配的主体源码树
+- [`scripts/`](./scripts)：构建、打包、验证、发布、流水线脚本
+- [`docs/plans/`](./docs/plans)：计划与范围文档
+- [`docs/guides/`](./docs/guides)：部署、发布、交互说明
+- [`docs/notes/`](./docs/notes)：验证证据、决策记录、运行结论
+
+## Quick Start
+
+### Headless
+
+- Build:
   [`build-headless-riscv64.sh`](./scripts/build-headless-riscv64.sh)
-- Headless package:
+- Package:
   [`package-headless-riscv64.sh`](./scripts/package-headless-riscv64.sh)
-- Headless verify:
+- Verify:
   [`verify-headless-riscv64.sh`](./scripts/verify-headless-riscv64.sh)
-- Headless pipeline:
+- Pipeline:
   [`run-headless-pipeline.sh`](./scripts/run-headless-pipeline.sh)
-- Interactive build:
+
+### Interactive
+
+- Build:
   [`build-interactive-riscv64.sh`](./scripts/build-interactive-riscv64.sh)
-- Interactive run:
+- Run:
   [`run-interactive-riscv64.sh`](./scripts/run-interactive-riscv64.sh)
-- Interactive verify:
+- Verify:
   [`verify-interactive-riscv64.sh`](./scripts/verify-interactive-riscv64.sh)
 - Full dual-lane pipeline:
   [`run-full-riscv64-pipeline.sh`](./scripts/run-full-riscv64-pipeline.sh)
 
-## Documentation
+快速入口：
+
+### Headless
+
+- 构建：
+  [`build-headless-riscv64.sh`](./scripts/build-headless-riscv64.sh)
+- 打包：
+  [`package-headless-riscv64.sh`](./scripts/package-headless-riscv64.sh)
+- 一键验证：
+  [`verify-headless-riscv64.sh`](./scripts/verify-headless-riscv64.sh)
+- 板端流水线：
+  [`run-headless-pipeline.sh`](./scripts/run-headless-pipeline.sh)
+
+### Interactive
+
+- 构建：
+  [`build-interactive-riscv64.sh`](./scripts/build-interactive-riscv64.sh)
+- 启动：
+  [`run-interactive-riscv64.sh`](./scripts/run-interactive-riscv64.sh)
+- 一键验证：
+  [`verify-interactive-riscv64.sh`](./scripts/verify-interactive-riscv64.sh)
+- 双线流水线：
+  [`run-full-riscv64-pipeline.sh`](./scripts/run-full-riscv64-pipeline.sh)
+
+## Core Documents
 
 - Primary plan: [CRUSH_RISCV64_PLAN.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/plans/CRUSH_RISCV64_PLAN.md)
 - Dependency audit: [dependency-audit.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/dependency-audit.md)
 - Build log: [build-log.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/build-log.md)
 - Runtime test: [runtime-test.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/runtime-test.md)
 - Decisions: [decisions.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/decisions.md)
-- Headless cleanup plan: [headless-cleanup-plan.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/headless-cleanup-plan.md)
 - Headless deploy guide: [HEADLESS_DEPLOY.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_DEPLOY.md)
 - Headless release guide: [HEADLESS_RELEASE.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_RELEASE.md)
 - Release notes template: [HEADLESS_RELEASE_NOTES_TEMPLATE.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_RELEASE_NOTES_TEMPLATE.md)
 - Interactive notes: [INTERACTIVE_TUI_NOTES.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/INTERACTIVE_TUI_NOTES.md)
+
+核心文档：
+
+- 总体计划：[CRUSH_RISCV64_PLAN.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/plans/CRUSH_RISCV64_PLAN.md)
+- 依赖审计：[dependency-audit.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/dependency-audit.md)
+- 构建日志：[build-log.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/build-log.md)
+- 运行验证：[runtime-test.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/runtime-test.md)
+- 决策记录：[decisions.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/notes/decisions.md)
+- Headless 部署说明：[HEADLESS_DEPLOY.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_DEPLOY.md)
+- Headless 发布说明：[HEADLESS_RELEASE.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_RELEASE.md)
+- Release Notes 模板：[HEADLESS_RELEASE_NOTES_TEMPLATE.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_RELEASE_NOTES_TEMPLATE.md)
+- Interactive 说明：[INTERACTIVE_TUI_NOTES.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/INTERACTIVE_TUI_NOTES.md)
+
+## Notes
+
+- The primary validated target is the K1 MUSE Pi Pro board.
+- The top-level repository now includes the active adapted `Crush` source tree under `forks/crush/`.
+- The project is currently strongest on the `headless` release path, while the `interactive` lane is proven viable and still being improved.
+
+补充说明：
+
+- 当前主要验证目标板为 K1 MUSE Pi Pro。
+- 顶层仓库现已纳入 `forks/crush/` 主体源码树。
+- 项目当前最成熟的是 `headless` 发布线，`interactive` 已被证明可行并在持续打磨中。
