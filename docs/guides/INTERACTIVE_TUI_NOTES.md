@@ -67,6 +67,22 @@ export DEEPSEEK_API_KEY="your-key"
 /home/pi/crush-riscv64/verify-interactive-riscv64.sh /home/pi/crush-riscv64/forks/crush crush-interactive-verify INTERACTIVE_VERIFY_OK
 ```
 
+For shell helper functions on the target:
+
+```bash
+source /home/pi/crush-riscv64/interactive-shell-functions.sh
+crushi-build
+crushi-run
+```
+
+For starting the TUI against your current directory:
+
+```bash
+cd /path/to/project
+source /home/pi/crush-riscv64/interactive-shell-functions.sh
+crushi-here
+```
+
 ## Notes
 
 - Launch this from a real SSH terminal or local tty, not from redirected stdin.

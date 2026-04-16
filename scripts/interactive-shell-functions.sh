@@ -14,6 +14,17 @@ crushi-run() {
   "$CRUSH_RISCV64_ROOT/run-interactive-riscv64.sh" "$CRUSH_RISCV64_SRC/${1:-crush-interactive-riscv64}"
 }
 
+crushi-start() {
+  local bin="${1:-crush-interactive-riscv64}"
+  shift || true
+  "$CRUSH_RISCV64_ROOT/run-interactive-riscv64.sh" "$CRUSH_RISCV64_SRC/$bin" "$@"
+}
+
+crushi-here() {
+  local bin="${1:-crush-interactive-riscv64}"
+  "$CRUSH_RISCV64_ROOT/run-interactive-riscv64.sh" "$CRUSH_RISCV64_SRC/$bin" --cwd "$(pwd)"
+}
+
 crushi-verify() {
   "$CRUSH_RISCV64_ROOT/verify-interactive-riscv64.sh" "$CRUSH_RISCV64_SRC" "${1:-crush-interactive-verify}" "${2:-INTERACTIVE_VERIFY_OK}" "${3:-/tmp/interactive-verify}"
 }
