@@ -1,0 +1,11 @@
+.omx/
+dist/
+
+# Keep the workspace repo focused on notes, scripts, and release assets.
+# The upstream Crush clone remains managed in its own nested git repository.
+forks/crush/
+
+# Local/editor noise
+*.log
+Thumbs.db
+.DS_Store

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "options": {
+    "disable_provider_auto_update": true,
+    "disable_default_providers": true,
+    "disable_notifications": true,
+    "disable_metrics": true,
+    "auto_lsp": false,
+    "progress": false
+  },
+  "providers": {
+    "deepseek": {
+      "type": "openai-compat",
+      "base_url": "https://api.deepseek.com/v1",
+      "api_key": "$DEEPSEEK_API_KEY",
+      "models": [
+        {
+          "id": "deepseek-chat",
+          "name": "DeepSeek Chat",
+          "context_window": 64000,
+          "default_max_tokens": 4000
+        }
+      ]
+    }
+  },
+  "permissions": {
+    "allowed_tools": [
+      "bash",
+      "view",
+      "grep",
+      "glob",
+      "ls",
+      "edit",
+      "multiedit",
+      "write"
+    ]
+  }
+}
