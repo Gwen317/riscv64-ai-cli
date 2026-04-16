@@ -18,6 +18,24 @@ This repository currently has two delivery lanes:
 - `headless`：当前主交付线，已经可以构建、打包、验证和发布
 - `interactive`：次级交付线，主要用于终端聊天开发和 TUI 恢复
 
+## What This Repo Is
+
+This is both:
+
+- an adaptation workspace
+- a deliverable packaging repo
+
+It records the practical work needed to make `Crush` usable on `riscv64 Linux`,
+while also shipping scripts and docs that reproduce the current validated flow.
+
+这个仓库同时承担两种角色：
+
+- 适配研发工作区
+- 当前阶段可交付物仓库
+
+它既记录 `Crush` 在 `riscv64 Linux` 上的适配过程，也保存当前已经验证通过的构建、
+打包、发布、验证流程。
+
 ## Current Status
 
 - Native `riscv64 Linux` builds are validated on the K1 MUSE Pi Pro target
@@ -105,6 +123,8 @@ This repository currently has two delivery lanes:
 - Headless release guide: [HEADLESS_RELEASE.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_RELEASE.md)
 - Release notes template: [HEADLESS_RELEASE_NOTES_TEMPLATE.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/HEADLESS_RELEASE_NOTES_TEMPLATE.md)
 - Interactive notes: [INTERACTIVE_TUI_NOTES.md](/d:/Users/Gwen317/Desktop/Program/riscv64/docs/guides/INTERACTIVE_TUI_NOTES.md)
+- Contributing guide: [CONTRIBUTING.md](/d:/Users/Gwen317/Desktop/Program/riscv64/CONTRIBUTING.md)
+- Roadmap: [ROADMAP.md](/d:/Users/Gwen317/Desktop/Program/riscv64/ROADMAP.md)
 
 核心文档：
 
