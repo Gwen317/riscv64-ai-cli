@@ -34,6 +34,29 @@ Once the TUI is open:
 - press `Ctrl+L` to open model selection
 - press `Ctrl+C` to quit
 
+## Session continuation
+
+Interactive root supports:
+
+- `--continue` to reopen the most recent session
+- `--session <id>` to reopen a specific session
+
+Examples:
+
+```bash
+/home/pi/crush-riscv64/run-interactive-riscv64.sh /home/pi/crush-riscv64/forks/crush/crush-interactive-riscv64 --continue
+```
+
+```bash
+/home/pi/crush-riscv64/run-interactive-riscv64.sh /home/pi/crush-riscv64/forks/crush/crush-interactive-riscv64 --session <id>
+```
+
+Validated continuation proof:
+
+- first prompt and second prompt can be sent in separate launches
+- `--continue` reuses the same session id
+- both assistant replies were confirmed in the session database
+
 ## Recommended SSH workflow
 
 On the board:
@@ -73,6 +96,7 @@ For shell helper functions on the target:
 source /home/pi/crush-riscv64/interactive-shell-functions.sh
 crushi-build
 crushi-run
+crushi-continue
 ```
 
 For starting the TUI against your current directory:

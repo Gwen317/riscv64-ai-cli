@@ -41,6 +41,20 @@ After the UI opens:
 - `Ctrl+L` : models
 - `Ctrl+C` : quit
 
+## Continue an existing conversation
+
+Most recent session:
+
+```bash
+/home/pi/crush-riscv64/run-interactive-riscv64.sh /home/pi/crush-riscv64/forks/crush/crush-interactive-riscv64 --continue
+```
+
+Specific session:
+
+```bash
+/home/pi/crush-riscv64/run-interactive-riscv64.sh /home/pi/crush-riscv64/forks/crush/crush-interactive-riscv64 --session <id>
+```
+
 ## If it does not work
 
 - if you launched it from redirected stdin, restart from a normal SSH terminal

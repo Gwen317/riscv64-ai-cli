@@ -163,3 +163,11 @@ Reason:
 - A validated interactive path still feels awkward if every launch requires long manual commands
 - Lightweight shell functions are a low-risk way to improve operator ergonomics without changing core runtime behavior
 - This helps bridge the gap between “technically works” and “comfortable to use over SSH”
+
+### Treat interactive session continuation as a validated capability
+
+Reason:
+
+- Manual development is much less useful if every restart loses the active thread
+- The interactive line now has evidence that `--continue` reuses the same session and preserves chat history
+- This raises the interactive path from simple viability to a more practical developer workflow

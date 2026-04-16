@@ -128,6 +128,7 @@ while also shipping scripts and docs that reproduce the current validated flow.
 - Release notes template: [HEADLESS_RELEASE_NOTES_TEMPLATE.md](./docs/guides/HEADLESS_RELEASE_NOTES_TEMPLATE.md)
 - Interactive notes: [INTERACTIVE_TUI_NOTES.md](./docs/guides/INTERACTIVE_TUI_NOTES.md)
 - Interactive operator checklist: [INTERACTIVE_OPERATOR_CHECKLIST.md](./docs/guides/INTERACTIVE_OPERATOR_CHECKLIST.md)
+- Interactive known issues: [INTERACTIVE_KNOWN_ISSUES.md](./docs/guides/INTERACTIVE_KNOWN_ISSUES.md)
 - Contributing guide: [CONTRIBUTING.md](./CONTRIBUTING.md)
 - Roadmap: [ROADMAP.md](./ROADMAP.md)
 
@@ -143,6 +144,7 @@ while also shipping scripts and docs that reproduce the current validated flow.
 - Release Notes 模板：[HEADLESS_RELEASE_NOTES_TEMPLATE.md](./docs/guides/HEADLESS_RELEASE_NOTES_TEMPLATE.md)
 - Interactive 说明：[INTERACTIVE_TUI_NOTES.md](./docs/guides/INTERACTIVE_TUI_NOTES.md)
 - Interactive 操作清单：[INTERACTIVE_OPERATOR_CHECKLIST.md](./docs/guides/INTERACTIVE_OPERATOR_CHECKLIST.md)
+- Interactive 已知问题：[INTERACTIVE_KNOWN_ISSUES.md](./docs/guides/INTERACTIVE_KNOWN_ISSUES.md)
 
 ## Notes
 

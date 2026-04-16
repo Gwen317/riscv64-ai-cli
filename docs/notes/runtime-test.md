@@ -94,6 +94,12 @@
 - Interactive operator helpers:
   - `interactive-shell-functions.sh` can be sourced on the target
   - helper functions for build, run, and verify are available in the shell
+- Interactive continuation:
+  - `test-interactive-continuation.py /home/pi/crush-riscv64/forks/crush/crush-interactive-riscv64 INTERACTIVE_CONTINUE_A INTERACTIVE_CONTINUE_B /tmp/interactive-chat-continuation`
+  - Passed
+  - Evidence:
+    - exactly one session row
+    - both user prompts and both assistant replies persisted under the same session id
 - Full pipeline:
   - `run-full-riscv64-pipeline.sh ... HEADLESS_FULL_PIPELINE_OK INTERACTIVE_FULL_PIPELINE_OK`
   - Passed
