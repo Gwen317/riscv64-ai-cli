@@ -82,6 +82,14 @@
    - Result: passed
    - Conclusion: pipeline wrapper now reproduces release bundle generation, notes generation, smoke verification, and persistent pipeline logging
 
+15. `/home/pi/crush-riscv64/verify-interactive-riscv64.sh /home/pi/crush-riscv64/forks/crush crush-interactive-verify INTERACTIVE_VERIFY_OK /tmp/interactive-verify-run`
+   - Result: passed
+   - Conclusion: interactive build + pseudo-tty chat smoke is now reproducible from one command
+
+16. `/home/pi/crush-riscv64/run-full-riscv64-pipeline.sh /home/pi/crush-riscv64/forks/crush /home/pi/crush-riscv64/dist crush-headless-full-pipeline crush-interactive-full-pipeline HEADLESS_FULL_PIPELINE_OK INTERACTIVE_FULL_PIPELINE_OK`
+   - Result: passed
+   - Conclusion: one board-side wrapper now validates both the headless release flow and the interactive chat flow
+
 ### Current conclusion
 
 - `Crush` can be compiled on native `riscv64 Linux`.

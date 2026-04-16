@@ -147,3 +147,11 @@ Reason:
 - The interactive binary now builds and can enter a real terminal UI session on the target
 - A minimal prompt/response loop has been validated through pseudo-tty automation and database inspection
 - The headless line remains the primary delivery track because it is already packaged and release-oriented
+
+### Add interactive and full-pipeline verification wrappers
+
+Reason:
+
+- The project now has two meaningful delivery lanes, so validation should cover both
+- The interactive wrapper turns a raw pseudo-tty experiment into a reusable proof step
+- The full pipeline wrapper gives the board a single command that exercises headless release flow plus interactive chat viability

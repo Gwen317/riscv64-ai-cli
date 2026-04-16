@@ -28,6 +28,13 @@ export DEEPSEEK_API_KEY="your-key"
 /home/pi/crush-riscv64/test-interactive-riscv64.py /home/pi/crush-riscv64/forks/crush/crush-interactive-riscv64 INTERACTIVE_SMOKE_OK
 ```
 
+For a build + smoke verification wrapper:
+
+```bash
+export DEEPSEEK_API_KEY="your-key"
+/home/pi/crush-riscv64/verify-interactive-riscv64.sh /home/pi/crush-riscv64/forks/crush crush-interactive-verify INTERACTIVE_VERIFY_OK
+```
+
 ## Notes
 
 - Launch this from a real SSH terminal or local tty, not from redirected stdin.

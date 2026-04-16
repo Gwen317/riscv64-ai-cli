@@ -18,14 +18,14 @@ mkdir -p "$bundle_dir"
 
 "$script_dir/package-headless-riscv64.sh" "$src_dir" "$artifact_name" "$bundle_dir"
 
-cp "$repo_root/HEADLESS_DEPLOY.md" "$bundle_dir/"
-cp "$repo_root/HEADLESS_RELEASE.md" "$bundle_dir/"
+cp "$repo_root/docs/guides/HEADLESS_DEPLOY.md" "$bundle_dir/"
+cp "$repo_root/docs/guides/HEADLESS_RELEASE.md" "$bundle_dir/"
 cp "$config_template" "$bundle_dir/crush-deepseek.config.json"
 
 for optional_file in \
-  "$repo_root/notes/build-log.md" \
-  "$repo_root/notes/runtime-test.md" \
-  "$repo_root/notes/decisions.md"
+  "$repo_root/docs/notes/build-log.md" \
+  "$repo_root/docs/notes/runtime-test.md" \
+  "$repo_root/docs/notes/decisions.md"
 do
   if [[ -f "$optional_file" ]]; then
     cp "$optional_file" "$bundle_dir/"

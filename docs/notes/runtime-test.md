@@ -87,6 +87,16 @@
 - Interactive smoke result:
   - user message persisted: `Reply with exactly: INTERACTIVE_TUI_OK`
   - assistant message persisted: `INTERACTIVE_TUI_OK`
+- Interactive verify wrapper:
+  - `verify-interactive-riscv64.sh /home/pi/crush-riscv64/forks/crush crush-interactive-verify INTERACTIVE_VERIFY_OK /tmp/interactive-verify-run`
+  - Passed
+  - Returned: `INTERACTIVE_VERIFY_OK`
+- Full pipeline:
+  - `run-full-riscv64-pipeline.sh ... HEADLESS_FULL_PIPELINE_OK INTERACTIVE_FULL_PIPELINE_OK`
+  - Passed
+  - Returned:
+    - `HEADLESS_FULL_PIPELINE_OK`
+    - `INTERACTIVE_FULL_PIPELINE_OK`
 
 ### Headless build
 
